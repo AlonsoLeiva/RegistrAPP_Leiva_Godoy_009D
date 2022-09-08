@@ -1,0 +1,91 @@
+<ion-header>
+  <ion-toolbar class="encabezado">
+    <ion-buttons slot="start">
+      <ion-back-button 
+        defaultHref="/inicio-sesion"
+        text="Back"
+        color="primary"
+        mode="ios"></ion-back-button>
+    </ion-buttons>
+    <ion-title color="white">Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="fondo">
+  <ion-list-header>
+    <h1 style="margin-bottom:20px ;">Registro Docente</h1>
+  </ion-list-header>
+<form #formulario="ngForm" (ngSubmit) ="onSubmit()">
+  <ion-item class="objeto">
+    <ion-label>Nombre: </ion-label>
+    <ion-input type="text" placeholder="Nombre"
+               name="nombre" [(ngModel)]="docente.nombre" minlength="3" required>
+    </ion-input>
+  </ion-item>
+<!------------------------------------------------------------------------------------------->  
+<ion-item class="objeto">
+  <ion-label>Apellido: </ion-label>
+  <ion-input type="text" placeholder="Apellido"
+             name="apellido" [(ngModel)]="docente.apellido" minlength="3" required>
+  </ion-input>
+</ion-item>
+<!------------------------------------------------------------------------------------------->  
+  <ion-item >
+    <ion-label>Email: </ion-label>
+    <ion-input type="email" placeholder="Email institucional"
+               name="email" [(ngModel)]="docente.email"
+               pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" required>
+    </ion-input>
+  </ion-item>
+<!------------------------------------------------------------------------------------------->
+  <ion-item>
+    <ion-label>Contraseña: </ion-label>
+    <ion-input type="password" placeholder="Contraseña"
+               name="password" [(ngModel)]="docente.password" minlength="6" required>
+    </ion-input>
+  </ion-item>
+<!------------------------------------------------------------------------------------------->
+<ion-item>
+  <ion-label>Repetir Contraseña: </ion-label>
+  <ion-input type="password" placeholder="Contraseña"
+             name="password2" [(ngModel)]="docente.password2" minlength="6" required >
+  </ion-input>
+</ion-item>
+<!------------------------------------------------------------------------------------------->
+<ion-item>
+  <ion-label>Sexo:</ion-label>
+  <ion-select placeholder="Sexo" [(ngModel)]="docente.sexo" name="Sesion" mode="ios" required>
+    <ion-select-option required value="Masculino">Masculino</ion-select-option>
+    <ion-select-option required value="Femenino">Femenino</ion-select-option>
+    <ion-select-option required value="Otro">Otro</ion-select-option>
+  </ion-select>
+</ion-item>
+<!------------------------------------------------------------------------------------------->
+<ion-item>
+  <ion-label>Facultad: </ion-label>
+  <ion-input type="text" placeholder="Facultad"
+             name="escuela" [(ngModel)]="docente.facultad" minlength="6" required>
+  </ion-input>
+</ion-item>
+<!------------------------------------------------------------------------------------------->
+<ion-item>
+  <ion-label>Sede: </ion-label>
+  <ion-input type="text" placeholder="Sede"
+             name="sede" [(ngModel)]="docente.sede" minlength="6" required>
+  </ion-input>
+</ion-item>
+<!------------------------------------------------------------------------------------------->
+<ion-item>
+  <ion-label>Titulo: </ion-label>
+  <ion-input type="text" placeholder="Titulo"
+             name="title" [(ngModel)]="docente.titulo" minlength="6" required>
+  </ion-input>
+</ion-item>
+<!------------------------------------------------------------------------------------------->
+<ion-button [disabled] ="formulario.invalid" class="boton"
+            type="submit" expand="block" fill="outline" shape="round" routerLink="/inicio-sesion">
+      Registrar
+</ion-button>
+</form>
+
+</ion-content>

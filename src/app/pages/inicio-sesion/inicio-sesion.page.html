@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+  <ion-title>Inicio sesión</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-icon class="icono" name="person-circle-outline"></ion-icon>
+  <form #formulario="ngForm" (ngSubmit)="onSubmit()">
+    <ion-item>
+      <ion-label>Iniciar Sesión como:</ion-label>
+      <ion-select placeholder="Iniciar sesión como:" [(ngModel)]="iniciosesion.tipo" name="Sesion" mode="ios" required>
+        <ion-select-option required value="Estudiante">Estudiante</ion-select-option>
+        <ion-select-option required value="Docente">Docente</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Correo: </ion-label>
+      <ion-input type="email" placeholder="Email"
+                 name="email" [(ngModel)]="iniciosesion.correo" 
+                 pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" 
+                 required>
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Contraseña: </ion-label>
+      <ion-input type="password" placeholder="Contraseña"
+                 name="contraseña" value="" [(ngModel)]="iniciosesion.password"
+                 required></ion-input>
+    </ion-item>
+    <hr>
+    <a style="margin-left: 20px;" routerLink="/registro-usuario">Crear Cuenta</a>
+    <a style="margin-left: 20px;" routerLink="/registro-docente">Crear Cuenta Docente</a>
+    <ion-button class="boton" expand="block" fill="outline" shape="round" [disabled]="formulario.invalid" routerLink="/inicio" type="submit">
+      Iniciar sesión
+    </ion-button>
+    <ion-button class="boton2" color="primary" expand="block" fill="outline" shape="round" routerLink="/restablecer-password">
+      Restablecer Contraseña
+    </ion-button>
+  </form>
+  
+</ion-content>
