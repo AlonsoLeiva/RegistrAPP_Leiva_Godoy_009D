@@ -27,7 +27,7 @@ export class GenerarQrPage implements OnInit {
   }
 
   mostrarMenu(){
-    this.menuController.open('first');
+    this.menuController.open('second');
   }
 
 }

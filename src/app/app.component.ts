@@ -6,6 +6,7 @@ interface Componente{
   redirecTo:string;
 }
 
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -22,14 +23,32 @@ export class AppComponent {
       redirecTo: '/inicio'
     },
     { 
-      icon: 'home-outline',
-      name: 'Inicio Docente',
-      redirecTo: '/inicio-docente'
-    },
-    { 
       icon: 'qr-code-outline',
       name: 'Escaneo QR',
       redirecTo: '/escaneo-qr'
+    },
+    { 
+      icon: 'book-outline',
+      name: 'Tutorial',
+      redirecTo: '/tutorial'
+    },
+    { 
+      icon: 'calendar-outline',
+      name: 'Feriados',
+      redirecTo: '/feriados'
+    },
+    { 
+      icon: 'person-circle-outline',
+      name: 'Perfil',
+      redirecTo: '/perfil-usuario'
+    },
+  ];
+  
+  componentes2 : Componente[] = [
+    { 
+      icon: 'home-outline',
+      name: 'Inicio',
+      redirecTo: '/inicio-docente'
     },
     { 
       icon: 'qr-code-outline',
@@ -39,20 +58,19 @@ export class AppComponent {
     { 
       icon: 'book-outline',
       name: 'Tutorial',
-      redirecTo: '/tutorial'
+      redirecTo: '/tutorial-docente'
     },
     { 
-      icon: 'book-outline',
-      name: 'Tutorial Docente',
-      redirecTo: '/tutorial-docente'
+      icon: 'calendar-outline',
+      name: 'Feriados',
+      redirecTo: '/feriados-docente'
     },
     { 
       icon: 'person-circle-outline',
       name: 'Perfil',
-      redirecTo: '/perfil-usuario'
+      redirecTo: '/perfil-docente'
     },
   ];
-  
 
 
 

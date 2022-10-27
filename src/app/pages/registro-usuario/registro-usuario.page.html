@@ -15,68 +15,68 @@
   <ion-list-header>
     <h1 style="margin-bottom:20px ;">Registro Estudiante</h1>
   </ion-list-header>
-<form #formulario="ngForm" (ngSubmit) ="onSubmit()">
+<form [formGroup] = "formularioRegistro" (keyup.enter)="CrearUsuario()">
   <ion-item class="objeto">
     <ion-label>Nombre: </ion-label>
-    <ion-input type="text" placeholder="Nombre"
-               name="nombre" [(ngModel)]="estudiante.nombre" minlength="3" required>
+    <ion-input type="text" placeholder="Nombre" position="floating"
+               formControlName="nombre" minlength="3">
     </ion-input>
   </ion-item>
 <!------------------------------------------------------------------------------------------->  
 <ion-item class="objeto">
   <ion-label>Apellido: </ion-label>
-  <ion-input type="text" placeholder="Apellido"
-             name="apellido" [(ngModel)]="estudiante.apellido" minlength="3" required>
+  <ion-input type="text" placeholder="Apellido" position="floating"
+             formControlName="apellido" minlength="3">
   </ion-input>
 </ion-item>
 <!------------------------------------------------------------------------------------------->  
   <ion-item >
     <ion-label>Email: </ion-label>
-    <ion-input type="email" placeholder="Email institucional"
-               name="email" [(ngModel)]="estudiante.email"
-               pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" required>
+    <ion-input type="text" placeholder="Email" position="floating"
+               formControlName="correo"
+               pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$">
     </ion-input>
   </ion-item>
 <!------------------------------------------------------------------------------------------->
   <ion-item>
     <ion-label>Contraseña: </ion-label>
-    <ion-input type="password" placeholder="Contraseña"
-               name="password" [(ngModel)]="estudiante.password" minlength="6" required>
+    <ion-input type="password" placeholder="Contraseña" position="floating"
+               formControlName="password" minlength="6">
     </ion-input>
   </ion-item>
 <!------------------------------------------------------------------------------------------->
 <ion-item>
   <ion-label>Repetir Contraseña: </ion-label>
-  <ion-input type="password" placeholder="Contraseña"
-             name="password2" [(ngModel)]="estudiante.password2" minlength="6" required >
+  <ion-input type="password" placeholder="Contraseña" position="floating"
+             formControlName="password2" minlength="6">
   </ion-input>
 </ion-item>
 <!------------------------------------------------------------------------------------------->
 <ion-item>
   <ion-label>Sexo:</ion-label>
-  <ion-select placeholder="Sexo" [(ngModel)]="estudiante.sexo" name="Sesion" mode="ios" required>
-    <ion-select-option required value="Masculino">Masculino</ion-select-option>
-    <ion-select-option required value="Femenino">Femenino</ion-select-option>
-    <ion-select-option required value="Otro">Otro</ion-select-option>
+  <ion-select placeholder="Sexo" formControlName="sexo" mode="ios" position="floating">
+    <ion-select-option  value="Masculino">Masculino</ion-select-option>
+    <ion-select-option  value="Femenino">Femenino</ion-select-option>
+    <ion-select-option  value="Otro">Otro</ion-select-option>
   </ion-select>
 </ion-item>
 <!------------------------------------------------------------------------------------------->
 <ion-item>
   <ion-label>Carrera: </ion-label>
-  <ion-input type="text" placeholder="Carrera"
-             name="carrera" [(ngModel)]="estudiante.carrera" minlength="6" required>
+  <ion-input type="text" placeholder="Carrera" position="floating"
+             formControlName="carrera" minlength="6" >
   </ion-input>
 </ion-item>
 <!------------------------------------------------------------------------------------------->
 <ion-item>
   <ion-label>Sede: </ion-label>
-  <ion-input type="text" placeholder="Sede"
-             name="sede" [(ngModel)]="estudiante.sede" minlength="6" required>
+  <ion-input type="text" placeholder="Sede" position="floating"
+             formControlName="sede" minlength="3" >
   </ion-input>
 </ion-item>
 <!------------------------------------------------------------------------------------------->
-<ion-button [disabled] ="formulario.invalid" class="boton"
-            type="submit" expand="block" fill="outline" shape="round" routerLink="/inicio-sesion">
+<ion-button (click)="CrearUsuario()" class="boton"
+            expand="block" fill="outline" shape="round">
       Registrar
 </ion-button>
 </form>
