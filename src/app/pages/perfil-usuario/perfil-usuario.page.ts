@@ -18,8 +18,10 @@ export class PerfilUsuarioPage implements OnInit {
   }
 
   mostrarMenu(){
+    this.menuController.enable(true, 'first')
     this.menuController.open('first');
   }
+
 
   async CerrarSesion() {
     localStorage.removeItem('ingresado1');

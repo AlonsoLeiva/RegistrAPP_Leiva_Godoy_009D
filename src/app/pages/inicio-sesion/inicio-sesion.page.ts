@@ -20,7 +20,7 @@ export class InicioSesionPage implements OnInit {
               private navController: NavController, 
               private registroService: RegistroserviceService,
               private fb: FormBuilder) {
-              this.menuController.enable(false);
+
       this.formularioLogin=fb.group({ 
         'tipo' : new FormControl("", Validators.required),
         'correo' : new FormControl("", Validators.required),
@@ -29,6 +29,9 @@ export class InicioSesionPage implements OnInit {
      }
 
   ngOnInit() {
+    this.menuController.enable(false);
+    this.menuController.close('first');
+    this.menuController.close('second')
   }
 //---------------------------------------------------------------------------------------------------------
     //Metodo que comprueba la existencia del usuario en el storage

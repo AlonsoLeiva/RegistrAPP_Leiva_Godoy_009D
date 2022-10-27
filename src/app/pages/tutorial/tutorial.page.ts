@@ -15,7 +15,9 @@ export class TutorialPage implements OnInit {
 
 
   mostrarMenu(){
+    this.menuController.enable(true, 'first')
     this.menuController.open('first');
   }
+
 
 }

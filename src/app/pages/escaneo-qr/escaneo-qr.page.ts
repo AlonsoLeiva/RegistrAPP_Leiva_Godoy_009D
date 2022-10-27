@@ -27,6 +27,8 @@ export class EscaneoQrPage implements OnInit {
   }
 
   mostrarMenu(){
+    this.menuController.enable(true, 'first')
     this.menuController.open('first');
   }
+
 }

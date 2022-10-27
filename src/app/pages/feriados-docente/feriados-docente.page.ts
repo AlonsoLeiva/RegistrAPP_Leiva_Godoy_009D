@@ -18,13 +18,12 @@ export class FeriadosDocentePage implements OnInit {
   ngOnInit() {
     this.feriadoService.getFeriados().subscribe(resp => {
       this.feriados=resp;
-      localStorage.setItem('cantidad', 'true');
     })
   }
   
   mostrarMenu(){
-    this.menuController.enable(true, 'first')
-    this.menuController.open('first');
+    this.menuController.enable(true, 'second')
+    this.menuController.open('second');
   }
   
 }

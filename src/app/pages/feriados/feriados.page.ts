@@ -20,7 +20,6 @@ export class FeriadosPage implements OnInit {
   ngOnInit() {
     this.feriadoService.getFeriados().subscribe(resp => {
       this.feriados=resp;
-      localStorage.setItem('cantidad', 'true');
     })
   }
   

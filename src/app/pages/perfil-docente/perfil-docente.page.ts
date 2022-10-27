@@ -18,8 +18,10 @@ ngOnInit() {
 }
 
 mostrarMenu(){
-this.menuController.open('second');
+  this.menuController.enable(true, 'second')
+  this.menuController.open('second');
 }
+
 
 async CerrarSesion() {
 localStorage.removeItem('ingresado1');
