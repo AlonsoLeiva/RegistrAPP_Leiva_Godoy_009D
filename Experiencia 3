@@ -19,6 +19,5 @@ Una vez instalado para ejecutar testeos debe poner en la consola cualquiera de l
     - ng e2e
 Este comando es para descargar La biblioteca para generar QR dentro de la app.
     - npm install angularx-qrcode@14.0.0 --save
-PD: En caso de poseer otra version de angular, le sugiero revisarla en el archivo llamado Package.json
-    y entrar a la documentacion oficial de la biblioteca QRCODE para instalar la version que le corresponda.
+PD: En caso de poseer otra version de angular, le sugiero revisar la version en el archivo llamado Package.json y entrar a la documentacion oficial de la biblioteca QRCODE para instalar la version que le corresponda.
 Link: https://www.npmjs.com/package/angularx-qrcode#installation
