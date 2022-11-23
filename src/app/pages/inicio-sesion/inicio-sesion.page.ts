@@ -79,10 +79,10 @@ export class InicioSesionPage implements OnInit {
               for (let obj of this.docente){
                 if (f.tipo == obj.tipo && f.correo == obj.correoDocente && f.password==obj.passDocente){
                   a=1;
-                  b=obj.nomDocente;
+                  b=obj.correoDocente;
                   console.log('ingresado');
                   localStorage.setItem('ingresado2', 'true');
-                  localStorage.setItem('nombre', b)
+                  localStorage.setItem('correo', b)
                   this.navController.navigateRoot('inicio-docente'); //Habilitamos page de inicio una vez logueado
                 }
     
