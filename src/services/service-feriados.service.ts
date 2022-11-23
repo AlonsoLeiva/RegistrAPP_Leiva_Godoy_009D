@@ -10,7 +10,7 @@ export class ServiceFeriadosService {
   constructor(private Http:HttpClient) { }
 
   getFeriados(){
-    return this.Http.get<Feriados>('/fl/feriados/2022?offset=1')
+    return this.Http.get<any>('https://api.victorsanmartin.com/feriados/en.json')
     //https://apis.digital.gob.cl/fl/feriados/2022?offset=1
   }
 

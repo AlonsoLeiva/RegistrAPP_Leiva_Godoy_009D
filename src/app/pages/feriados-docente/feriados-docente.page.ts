@@ -17,7 +17,7 @@ export class FeriadosDocentePage implements OnInit {
   
   ngOnInit() {
     this.feriadoService.getFeriados().subscribe(resp => {
-      this.feriados=resp;
+      this.feriados=resp.data;
     })
   }
   

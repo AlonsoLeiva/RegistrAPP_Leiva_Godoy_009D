@@ -1,13 +1,13 @@
   export interface Feriados {
-    nombre: String;
-    comentarios: String;
-    fecha: String;
-    irrenunciable: boolean;
-    tipo: String;
+    Status: String;
+    Data: data;
   }
 
 
-  export interface leyes {
-    nombre: String;
-    url: String;
+  export interface data {
+    Fecha: String;
+    Titulo: String;
+    Tipo: String;
+    irrenunciable: boolean;
+    Extra: String;
   }

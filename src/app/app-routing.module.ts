@@ -17,22 +17,6 @@ const routes: Routes = [
     canActivate: [IngresadoGuard]
   },
   {
-    path: 'alert',
-    loadChildren: () => import('./pages/alert/alert.module').then( m => m.AlertPageModule)
-  },
-  {
-    path: 'action-sheet',
-    loadChildren: () => import('./pages/action-sheet/action-sheet.module').then( m => m.ActionSheetPageModule)
-  },
-  {
-    path: 'card',
-    loadChildren: () => import('./pages/card/card.module').then( m => m.CardPageModule)
-  },
-  {
-    path: 'inputs',
-    loadChildren: () => import('./pages/inputs/inputs.module').then( m => m.InputsPageModule)
-  },
-  {
     path: 'registro-usuario',
     loadChildren: () => import('./pages/registro-usuario/registro-usuario.module').then( m => m.RegistroUsuarioPageModule),
     canActivate: [NoIngresadoGuard]
