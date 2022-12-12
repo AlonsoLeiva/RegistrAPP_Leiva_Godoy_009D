@@ -91,6 +91,11 @@ const routes: Routes = [
     loadChildren: () => import('./pages/feriados-docente/feriados-docente.module').then( m => m.FeriadosDocentePageModule),
     canActivate: [IngresadoDocenteGuard]
   },
+  {
+    path: 'asistencia-alumnos',
+    loadChildren: () => import('./pages/asistencia-alumnos/asistencia-alumnos.module').then( m => m.AsistenciaAlumnosPageModule),
+    canActivate: [IngresadoDocenteGuard]
+  },
 ];
 
 @NgModule({

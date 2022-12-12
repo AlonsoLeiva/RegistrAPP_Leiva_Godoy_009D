@@ -61,15 +61,20 @@ export class AppComponent {
       redirecTo: '/tutorial-docente'
     },
     { 
-      icon: 'calendar-outline',
+      icon: 'calendar-number-outline',
       name: 'Feriados',
       redirecTo: '/feriados-docente'
+    },
+    { 
+      icon: 'clipboard-outline',
+      name: 'Asistencias',
+      redirecTo: '/asistencia-alumnos'
     },
     { 
       icon: 'person-circle-outline',
       name: 'Perfil',
       redirecTo: '/perfil-docente'
-    },
+    }
   ];
 
 
